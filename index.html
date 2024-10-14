@@ -73,43 +73,47 @@
         </div>
     </section>
 
-    <!-- Formulário de Contato -->
-    <section id="contato" class="contato py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Entre em Contato Conosco</h2>
-            <p class="text-center">Estamos prontos para atender suas necessidades de manutenção e construção. Entre em contato conosco para solicitar um orçamento ou para mais informações sobre nossos serviços.</p>
-            <form id="contact-form" class="contact-form w-50 mx-auto" action="#" method="POST">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="nome" placeholder="Nome" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="E-mail" required>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" name="mensagem" placeholder="Sua mensagem" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark btn-block">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
+ <!-- Formulário de Contato -->
+ <section id="contato" class="contato py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Entre em Contato Conosco</h2>
+        <p class="text-center">Estamos prontos para atender suas necessidades de manutenção e construção. Entre em contato conosco para solicitar um orçamento ou para mais informações sobre nossos serviços.</p>
+        <form id="contact-form" class="contact-form w-50 mx-auto" action="#" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="mensagem" placeholder="Sua mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Seu Script JavaScript -->
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key correta
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
 
-            function sendMail(event) {
-                event.preventDefault();
-                emailjs.sendForm('service_2o3g29v', 'template_ou7derp', '#contact-form')
-                    .then(function () {
-                        alert('Mensagem enviada com sucesso!');
-                    }, function (error) {
-                        alert('Ocorreu um erro: ' + JSON.stringify(error));
-                    });
-            }
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key correta
 
-            document.getElementById('contact-form').addEventListener('submit', sendMail);
-        });
+        function sendMail(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_2o3g29v', 'template_ou7derp', '#contact-form')
+                .then(function () {
+                    alert('Mensagem enviada com sucesso!');
+                }, function (error) {
+                    alert('Ocorreu um erro: ' + JSON.stringify(error));
+                });
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', sendMail);
+    });
     </script>
 
 
