@@ -1,32 +1,7 @@
-export default function ContactUs() {
-
-    function sendEmail(e) {
-        e.preventDefault();
-
-    emailjs.sendForm('gmailmessage', 'template_qadh5ds', e.target, 'A3XA7os2qyIu8muCJ')
-        .then((result) => {
-            console.log(result.text);
-            alert("Mensagem enviada com sucesso! 👍");
-           
-        }, (error) => {
-            console.log(error.text);
-            alert(error.message)
-            
-        });
-        e.target.reset()
-    }
-
- 
-    }
-   
-       
-
-
 // Mostrar ou esconder o botão de voltar ao topo
 window.onscroll = function() {
     scrollFunction();
 };
-
 function scrollFunction() {
     let backToTopButton = document.querySelector(".back-to-top");
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -106,17 +81,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Função `goToNextSlide` definida para evitar erro de referência
-function goToNextSlide() {
-    // Lógica para mudar para o próximo slide
-    // Adicione aqui o código necessário para fazer o controle do carrossel
-    console.log("Próximo slide");
-}
+export default function ContactUs() {
 
-// Defina o intervalo para avançar os slides a cada 4 segundos
-const syncInterval = setInterval(goToNextSlide, 4000);
+    function sendEmail(e) {
+        e.preventDefault();
 
-// Inicialização do EmailJS
-document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("A3XA7os2qylu8muCJ");
-});
+    emailjs.sendForm('gmailmessage', 'template_qadh5ds', e.target, 'A3XA7os2qyIu8muCJ')
+        .then((result) => {
+            console.log(result.text);
+            alert("Mensagem enviada com sucesso! 👍");
+           
+        }, (error) => {
+            console.log(error.text);
+            alert(error.message)
+            
+        });
+        e.target.reset()
+    }
+
+ 
+    }
+   
+    export default function ContactUs() {
+
+        function sendEmail(e) {
+            e.preventDefault();
+    
+        emailjs.sendForm('gmailmessage', 'template_qadh5ds', e.target, 'A3XA7os2qyIu8muCJ')
+            .then((result) => {
+                console.log(result.text);
+                alert("Mensagem enviada com sucesso! 👍");
+               
+            }, (error) => {
+                console.log(error.text);
+                alert(error.message)
+                
+            });
+            e.target.reset()
+        }
+    
+     
+        }
+       
+
