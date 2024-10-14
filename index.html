@@ -73,12 +73,12 @@
         </div>
     </section>
 
-<!-- Formulário de Contato -->
+    <!-- Formulário de Contato -->
 <section id="contato" class="contato py-5">
     <div class="container">
         <h2 class="text-center mb-4">Entre em Contato Conosco</h2>
-        <p class="text-center">Estamos prontos para atender suas necessidades de instalação e manutenção. Entre em contato conosco para solicitar um orçamento ou para mais informações sobre nossos serviços.</p>
-        <form id="contact-form" class="contact-form w-50 mx-auto"  method="POST">
+        <p class="text-center">Estamos prontos para atender suas necessidades de manutenção e construção. Entre em contato conosco para solicitar um orçamento ou para mais informações sobre nossos serviços.</p>
+        <form id="contact-form" class="contact-form w-50 mx-auto" method="POST">
             <div class="form-group">
                 <input type="text" class="form-control" name="nome" placeholder="Nome" required>
             </div>
@@ -100,17 +100,23 @@
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function () {
-        emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key correta
+        // Inicialize o EmailJS com a chave pública
+        emailjs.init("A3XA7os2qylu8muCJ");
 
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
+        // Função para enviar o formulário
+        function sendMail(event) {
+            event.preventDefault(); // Impede o comportamento padrão de enviar e recarregar a página
+
             emailjs.sendForm('service_2o3g29v', 'template_ou7derp', '#contact-form')
                 .then(function () {
                     alert('Mensagem enviada com sucesso!');
                 }, function (error) {
                     alert('Ocorreu um erro: ' + JSON.stringify(error));
                 });
-        });
+        }
+
+        // Adiciona evento de envio ao formulário
+        document.getElementById('contact-form').addEventListener('submit', sendMail);
     });
 </script>
 
