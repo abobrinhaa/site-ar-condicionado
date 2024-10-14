@@ -47,83 +47,49 @@
         </div>
     </section>
     
-    <!-- Seção Nossos Serviços -->
-    <section id="nossos-servicos" class="nossos-servicos py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Nossos Serviços</h2>
-            <p class="text-center">Oferecemos serviços especializados em instalação de ar condicionado e câmeras de segurança, garantindo conforto e proteção para sua casa ou empresa.</p>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Instalação de Ar Condicionado</h3>
-                            <p class="card-text">Oferecemos serviços completos de instalação de ar condicionado, proporcionando conforto térmico para residências e empresas.</p>
-                        </div>
+    <div>
+        <div className="container">
+        <h2>Contato</h2>
+        <form onSubmit={sendEmail}>
+                <div className="row pt-5 mx-auto">
+                    <div className="col-8 form-group mx-auto">
+                        <input type="text" className="form-control" placeholder="Name" name="name"/>
+                    </div>
+                    <div className="col-8 form-group pt-2 mx-auto">
+                        <input type="email" className="form-control" placeholder="Email Address" name="email"/>
+                    
+                    <div className="col-lg-8 col-sm-12 form-group mx-auto">
+                        <label>Nome</label>
+                        <input type="text" autoFocus className="form-control" required placeholder="Nome" name="name"/>
+                    </div>
+                    <div className="col-8 form-group pt-2 mx-auto">
+                        <input type="text" className="form-control" placeholder="Subject" name="subject"/>
+                    <div className="col-lg-8 col-sm-12 form-group pt-1 mx-auto">
+                    <label>Email</label>
+                        <input type="email" className="form-control" required placeholder="Seu email" name="email"/>
+                    </div>
+                    <div className="col-8 form-group pt-2 mx-auto">
+                        <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+                    <div className="col-lg-8 col-sm-12 form-group pt-1 mx-auto">
+                    <label>Mensagem</label>
+                        <textarea className="form-control" id="" cols="30" rows="8" required placeholder="Sua mensagem" name="message"></textarea>
+                    </div>
+                    <div className="col-8 pt-3 mx-auto">
+                        <input type="submit" className="btn btn-info" value="Send Message"></input>
+                    <div className="col-lg-8 col-sm-12 pt-3 mx-auto">
+                        <input type="submit" className="btn btn-info" value="Enviar mensagem"></input>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">Instalação de Câmeras de Segurança</h3>
-                            <p class="card-text">Realizamos a instalação de câmeras de segurança para monitoramento e proteção de ambientes, garantindo tranquilidade para você e sua família.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Incluindo o script do EmailJS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            </form>
 
-<script type="text/javascript">
-    (function(){
-        // Inicializa o EmailJS com sua Public Key
-        emailjs.init("A3XA7os2qylu8muCJ");
-    })();
-</script>
 
-<form id="quoteForm">
-  <label for="name">Nome:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label for="project">Descrição do Projeto:</label><br>
-  <textarea id="project" name="project" rows="4" required></textarea><br><br>
-
-  <input type="submit" value="solicitar Orçamento">
-</form>
-
-<div id="result"></div>
-
-<script type="text/javascript">
-    document.getElementById('quoteForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita o recarregamento da página
-  
-      // Coleta os valores dos campos
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const project = document.getElementById('project').value;
-  
-      // Envia o email usando EmailJS
-      emailjs.send("service_2o3g29v", "template_qadh5ds", {
-        from_name: name,
-        reply_to: email,
-        message: project
-      }, "A3XA7os2qylu8muCJ").then(function(response) {
-        document.getElementById('result').innerText = "Orçamento enviado com sucesso!";
-      }, function(error) {
-        document.getElementById('result').innerText = "Ocorreu um erro ao enviar o orçamento.";
-      });
-    });
-  </script>
 
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.emailjs.com/sdk/3.3/email.min.js"></script>
+
 
 
 
