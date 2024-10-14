@@ -98,26 +98,26 @@
 <div id="result"></div>
 
 <script type="text/javascript">
-  document.getElementById('quoteForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o recarregamento da página
-
-    // Coleta os valores dos campos
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const project = document.getElementById('project').value;
-
-    // Envia o email usando EmailJS
-    emailjs.send("service_2o3g29v", "template_qadh5ds", {
-      from_name: name,
-      reply_to: email,
-      message: project
-    }).then(function(response) {
-      document.getElementById('result').innerText = "Orçamento enviado com sucesso!";
-    }, function(error) {
-      document.getElementById('result').innerText = "Ocorreu um erro ao enviar o orçamento.";
+    document.getElementById('quoteForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita o recarregamento da página
+  
+      // Coleta os valores dos campos
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const project = document.getElementById('project').value;
+  
+      // Envia o email usando EmailJS
+      emailjs.send("service_2o3g29v", "template_qadh5ds", {
+        from_name: name,
+        reply_to: email,
+        message: project
+      }, "A3XA7os2qylu8muCJ").then(function(response) {
+        document.getElementById('result').innerText = "Orçamento enviado com sucesso!";
+      }, function(error) {
+        document.getElementById('result').innerText = "Ocorreu um erro ao enviar o orçamento.";
+      });
     });
-});
-</script>
+  </script>
 
 
 <!-- Scripts -->
