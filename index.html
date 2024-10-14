@@ -78,23 +78,21 @@
 
 <!-- O seu script -->
 <script type="text/javascript">
-    (function () {
+    document.addEventListener("DOMContentLoaded", function () {
         emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key correta
-    })();
 
-    function sendMail(event) {
-        event.preventDefault();
-        emailjs.sendForm('service_2o3g29v', 'template_ou7derp', '#contact-form')
-            .then(function () {
-                alert('Mensagem enviada com sucesso!');
-            }, function (error) {
-                alert('Ocorreu um erro: ' + JSON.stringify(error));
-            });
-    }
+        function sendMail(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_2o3g29v', 'template_ou7derp', '#contact-form')
+                .then(function () {
+                    alert('Mensagem enviada com sucesso!');
+                }, function (error) {
+                    alert('Ocorreu um erro: ' + JSON.stringify(error));
+                });
+        }
 
-    window.onload = function () {
         document.getElementById('contact-form').addEventListener('submit', sendMail);
-    };
+    });
 </script>
 
 
