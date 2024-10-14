@@ -73,8 +73,8 @@
         </div>
     </section>
 
- <!-- Formulário de Contato -->
- <section id="contato" class="contato py-5">
+<!-- Formulário de Contato -->
+<section id="contato" class="contato py-5">
     <div class="container">
         <h2 class="text-center mb-4">Entre em Contato Conosco</h2>
         <p class="text-center">Estamos prontos para atender suas necessidades de manutenção e construção. Entre em contato conosco para solicitar um orçamento ou para mais informações sobre nossos serviços.</p>
@@ -96,13 +96,13 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<script src="https://cdn.emailjs.com/sdk/3.3/email.min.js"></script>
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function () {
         emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key correta
 
-        function sendMail(event) {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
             emailjs.sendForm('service_2o3g29v', 'template_ou7derp', '#contact-form')
                 .then(function () {
@@ -110,11 +110,9 @@
                 }, function (error) {
                     alert('Ocorreu um erro: ' + JSON.stringify(error));
                 });
-        }
-
-        document.getElementById('contact-form').addEventListener('submit', sendMail);
+        });
     });
-    </script>
+</script>
 
 
     <!-- Seção de Mapa e Footer -->
