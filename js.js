@@ -102,25 +102,21 @@ export default function ContactUs() {
  
     }
    
-    export default function ContactUs() {
+    function ContactUs() {
 
         function sendEmail(e) {
             e.preventDefault();
     
-        emailjs.sendForm('gmailmessage', 'template_qadh5ds', e.target, 'A3XA7os2qyIu8muCJ')
-            .then((result) => {
-                console.log(result.text);
-                alert("Mensagem enviada com sucesso! 👍");
-               
-            }, (error) => {
-                console.log(error.text);
-                alert(error.message)
-                
-            });
-            e.target.reset()
+            emailjs.sendForm('gmailmessage', 'template_qadh5ds', e.target, 'A3XA7os2qyIu8muCJ')
+                .then((result) => {
+                    console.log(result.text);
+                    alert("Mensagem enviada com sucesso! 👍");
+                }, (error) => {
+                    console.log(error.text);
+                    alert(error.message);
+                });
+            e.target.reset();
         }
-    
-     
-        }
+    }
        
 
