@@ -18,7 +18,7 @@
         <div class="container">
             <div class="hero-header d-flex justify-content-between align-items-center py-3">
                 <h1 class="logo">
-                    <img src="img/h1 class=logo img src=caminhoparasualogo.png alt=Logo ACCA Clima & Monitoramento h1.png" alt="Logo ACCA Clima & Monitoramento">
+                    <img src="img/logo.png" alt="Logo ACCA Clima & Monitoramento">
                 </h1>                
                 <nav class="navbar">
                     <ul class="navbar-nav d-flex flex-row gap-4">
@@ -31,10 +31,9 @@
             <div class="hero-text">
                 <h2>Climatizando e Protegendo Seu Espaço com Excelência.</h2>
                 <p class="lead">Na <span class="acca-highlight">ACCA</span>, oferecemos soluções completas de climatização e segurança. Instalamos ar condicionado e câmeras de segurança com tecnologia moderna, garantindo ambientes confortáveis e protegidos. Priorizamos qualidade e segurança em cada projeto, com uma equipe qualificada para transformar seu espaço.</p>
-                <a href="https://api.whatsapp.com/send?phone=5519999498449&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" class=" btn cta-button">Solicite um Orçamento!</a>
+                <a href="https://api.whatsapp.com/send?phone=5519999498449&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" class="btn cta-button">Solicite um Orçamento!</a>
             </div>
-            
-            
+        </div>
     </section>
 
     <section id="sobre-nos" class="py-5 bg-light text-dark text-center">
@@ -48,33 +47,32 @@
             </div>
         </div>
     </section>
-    
 
     <!-- Seção Nossos Serviços -->
-<section id="nossos-servicos" class="nossos-servicos py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Nossos Serviços</h2>
-        <p class="text-center">Oferecemos serviços especializados em instalação de ar condicionado e câmeras de segurança, garantindo conforto e proteção para sua casa ou empresa.</p>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">Instalação de Ar Condicionado</h3>
-                        <p class="card-text">Oferecemos serviços completos de instalação de ar condicionado, proporcionando conforto térmico para residências e empresas.</p>
+    <section id="nossos-servicos" class="nossos-servicos py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Nossos Serviços</h2>
+            <p class="text-center">Oferecemos serviços especializados em instalação de ar condicionado e câmeras de segurança, garantindo conforto e proteção para sua casa ou empresa.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Instalação de Ar Condicionado</h3>
+                            <p class="card-text">Oferecemos serviços completos de instalação de ar condicionado, proporcionando conforto térmico para residências e empresas.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">Instalação de Câmeras de Segurança</h3>
-                        <p class="card-text">Realizamos a instalação de câmeras de segurança para monitoramento e proteção de ambientes, garantindo tranquilidade para você e sua família.</p>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Instalação de Câmeras de Segurança</h3>
+                            <p class="card-text">Realizamos a instalação de câmeras de segurança para monitoramento e proteção de ambientes, garantindo tranquilidade para você e sua família.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Formulário de Contato -->
     <section id="contato" class="contato py-5">
@@ -93,29 +91,29 @@
                 </div>
                 <button type="submit" class="btn btn-dark btn-block">Enviar Mensagem</button>
             </form>
-            
         </div>
-    </section><script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key
         })();
-    
+
         function sendMail(event) {
             event.preventDefault();
-            emailjs.sendForm('service_2o3g29v', 'template_xxx', this)
+            emailjs.sendForm('service_2o3g29v', 'template_ou7derp', this)
                 .then(function () {
                     alert('Mensagem enviada com sucesso!');
                 }, function (error) {
                     alert('Ocorreu um erro: ' + JSON.stringify(error));
                 });
         }
-    
+
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', sendMail);
         };
     </script>
-    
 
     <!-- Seção de Mapa e Footer -->
     <section id="mapa-e-footer" class="d-flex justify-content-center align-items-center py-5 bg-dark text-white">
@@ -135,7 +133,7 @@
 
     <!-- Botão Flutuante do WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=5519999498449&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" class="whatsapp-float" target="_blank">
-        <img src="img/imgwhatsapp-icon.png.png" alt="WhatsApp" class="whatsapp-icon">
+        <img src="img/imgwhatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
 
     <!-- Botão de Voltar ao Topo -->
@@ -146,7 +144,5 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
-    <script src="js.js"></script>
 </body>
 </html>
