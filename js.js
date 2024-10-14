@@ -102,7 +102,7 @@ export default function ContactUs() {
  
     }
    
-    function ContactUs() {
+    export default function ContactUs() {
 
         function sendEmail(e) {
             e.preventDefault();
@@ -118,5 +118,6 @@ export default function ContactUs() {
             e.target.reset();
         }
     }
+    
        
 

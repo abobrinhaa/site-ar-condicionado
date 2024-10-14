@@ -75,33 +75,29 @@
     </section>
 <!-- Formulário de Contato -->
 <section id="contato" class="contato py-5">
-    <div>
-        <div className="container">
+    <div class="container">
         <h2>Contato</h2>
-        <form onSubmit={sendEmail}>
-                <div className="row pt-5 mx-auto">
-                   
-                    
-                    <div className="col-lg-8 col-sm-12 form-group mx-auto">
-                        <label>Nome</label>
-                        <input type="text" autoFocus className="form-control" required placeholder="Nome" name="name"/>
-                    </div>
-                    
-                    <div className="col-lg-8 col-sm-12 form-group pt-1 mx-auto">
-                    <label>Email</label>
-                        <input type="email" className="form-control" required placeholder="Seu email" name="email"/>
-                    </div>
-
-                    <div className="col-lg-8 col-sm-12 form-group pt-1 mx-auto">
-                    <label>Mensagem</label>
-                        <textarea className="form-control" id="" cols="30" rows="8" required placeholder="Sua mensagem" name="message"></textarea>
-                    </div>
-                        <input type="submit" className="btn btn-info" value="Enviar mensagem"></input>
-                    </div>
+        <form onSubmit="sendEmail(event)">
+            <div class="row pt-5 mx-auto">
+                <div class="col-lg-8 col-sm-12 form-group mx-auto">
+                    <label>Nome</label>
+                    <input type="text" autoFocus class="form-control" required placeholder="Nome" name="name"/>
                 </div>
-            </form>
+                <div class="col-lg-8 col-sm-12 form-group pt-1 mx-auto">
+                    <label>Email</label>
+                    <input type="email" class="form-control" required placeholder="Seu email" name="email"/>
+                </div>
+                <div class="col-lg-8 col-sm-12 form-group pt-1 mx-auto">
+                    <label>Mensagem</label>
+                    <textarea class="form-control" cols="30" rows="8" required placeholder="Sua mensagem" name="message"></textarea>
+                </div>
+                <input type="submit" class="btn btn-info" value="Enviar mensagem"></input>
+            </div>
+        </form>
+    </div>
+</section>
 
-    </section>
+<!-- Script -->
 <script type="module" src="js.js"></script>
 
 <!-- Scripts -->
