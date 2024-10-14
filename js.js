@@ -27,93 +27,72 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Função para enviar e-mail usando EmailJS
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("A3XA7os2qylu8muCJ"); // Substitua pela sua Public Key
 
-function sendMail(event) {
-    event.preventDefault();
-    emailjs.sendForm('service_2o3g29v', 'template_ou7derp', this)
-        .then(function () {
-            alert('Mensagem enviada com sucesso!');
-        }, function (error) {
-            alert('Ocorreu um erro: ' + JSON.stringify(error));
+    const contactForm = document.querySelector("#contact-form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            emailjs.sendForm('service_2o3g29v', 'template_ou7derp', this)
+                .then(function () {
+                    alert('Mensagem enviada com sucesso!');
+                }, function (error) {
+                    alert('Ocorreu um erro: ' + JSON.stringify(error));
+                });
         });
-}
-
-
-
+    }
+});
 
 // Esconde a barra de navegação após a primeira seção
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.hero-header');
     const heroSection = document.querySelector('.hero');
 
-    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    if (navbar && heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
 
-    if (heroBottom <= 0) {
-        navbar.classList.add('invisivel');
-    } else {
-        navbar.classList.remove('invisivel');
+        if (heroBottom <= 0) {
+            navbar.classList.add('invisivel');
+        } else {
+            navbar.classList.remove('invisivel');
+        }
     }
 });
 
+// Efeito de rolagem suave nos botões de navegação
 document.addEventListener("DOMContentLoaded", function () {
-    // Efeito de rolagem suave nos botões de navegação
-    const buttons = document.querySelectorAll(".btn");
-    buttons.forEach(button => {
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetID = this.getAttribute("href");
-            const targetSection = document.querySelector(targetID);
-            window.scrollTo({
-                top: targetSection.offsetTop - 70,
-                behavior: "smooth"
-            });
-        });
-    });
-
-    // Efeito de rolagem nos links do menu
-    const links = document.querySelectorAll(".nav-link");
+    // Efeito de rolagem suave nos links do menu
+    const links = document.querySelectorAll(".nav-link, .btn");
     links.forEach(link => {
         link.addEventListener("click", function (e) {
-            e.preventDefault();
             const targetID = this.getAttribute("href");
-            const targetSection = document.querySelector(targetID);
-            window.scrollTo({
-                top: targetSection.offsetTop - 70,
-                behavior: "smooth"
-            });
+            if (targetID && targetID.startsWith("#")) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetID);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70,
+                        behavior: "smooth"
+                    });
+                }
+            }
         });
     });
+});
 
-                // Defina o intervalo para avançar os slides a cada 4 segundos
-                const syncInterval = setInterval(goToNextSlide, 4000);
-    
-                // Sincronizar manualmente ao clicar em um controle
-                carousels.forEach(carousel => {
-                    carousel.addEventListener('slide.bs.carousel', function (e) {
-                        currentIndex = e.to;
-                        carousels.forEach(syncCarousel => {
-                            if (syncCarousel !== carousel) {
-                                const bsCarousel = bootstrap.Carousel.getInstance(syncCarousel);
-                                if (bsCarousel) {
-                                    bsCarousel.to(currentIndex);
-                                }
-                            }
-                        });
-                    });
-                });
-            });
+// Função `goToNextSlide` definida para evitar erro de referência
+function goToNextSlide() {
+    // Lógica para mudar para o próximo slide
+    // Adicione aqui o código necessário para fazer o controle do carrossel
+    console.log("Próximo slide");
+}
 
-    // Botão WhatsApp
-    document.querySelector(".contact-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        emailjs.sendForm('service_2o3g29v', 'template_id', this)
-            .then(function() {
-                alert('Mensagem enviada com sucesso!');
-            }, function(error) {
-                alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
-            });
-    });
+// Defina o intervalo para avançar os slides a cada 4 segundos
+const syncInterval = setInterval(goToNextSlide, 4000);
 
+// Inicialização do EmailJS
+document.addEventListener("DOMContentLoaded", function () {
     emailjs.init("A3XA7os2qylu8muCJ");
-
-
+});
