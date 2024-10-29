@@ -1,0 +1,625 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.logo img {
+    width: 110px; /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção Hero */
+.invisivel {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.acca-highlight {
+    color: #2b8dfc; /* Cor azul para destacar o texto ACCA */
+    font-weight: bold; /* Opcional, se quiser enfatizar ainda mais */
+}
+
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url('img/pexels-jose-andres-pacheco-cortes-3641213-5463576.jpg') no-repeat center center/cover;
+    padding: 2rem;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    max-width: 950px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+    text-align: left;
+    z-index: 1;
+}
+
+.hero-header {
+    position: fixed;
+    top: 0;
+    width: 160vh;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #2b8dfc;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #2b8dfc;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #2b8dfc !important;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.cta-button {
+    background: #2b8dfc;
+    color: #333;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #2b8dfc;
+}
+
+/* Seção Sobre Nós */
+.sobre-nos-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.sobre-nos-card {
+    position: relative;
+    width: 30%;
+    border-radius: 10px;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+}
+
+.sobre-nos-card:hover {
+    transform: scale(1.05);
+}
+
+.sobre-nos-card h3,
+.sobre-nos-card p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Seção Nossos Serviços */
+.nossos-servicos {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.nossos-servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.nossos-servicos p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.service-card {
+    position: relative;
+    width: 30%;
+    border-radius: 10px;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 250px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card h3,
+.service-card p {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.card-servico {
+    width: 25%;
+    min-width: 300px;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    word-break: keep-all;
+    white-space: normal;
+}
+
+.card-servico h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-servico p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Estilo dos Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body i {
+    color: #2b8dfc;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+.btn {
+    border: none;
+    background: #2b8dfc;
+    color: #333;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #0066cc;
+    transform: scale(1.05);
+}
+
+.projetos {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e0e0e0 100%);
+    padding: 4rem 0;
+}
+
+.projetos h2 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.img-fluid {
+    border-radius: 15px 15px 0 0;
+}
+
+#missao-visao-valores {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#missao-visao-valores .card {
+    flex: 1;
+    margin: 0;
+    border: none;
+    padding: 2rem;
+    height: 100%;
+    background: #ffffff;
+    color: #333;
+}
+
+#missao-visao-valores .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#missao-visao-valores .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contato {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2b8dfc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+#contato {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contato h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2b8dfc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0066cc;
+}
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.social-media a {
+    color: #2b8dfc;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #2b8dfc;
+}
+
+.hero-text,
+.service-card,
+.sobre-nos-card,
+.project-item {
+    width: 100%;
+}
+
+.service-cards,
+.sobre-nos-cards,
+.project-gallery {
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+#projetos .card {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+#projetos .card:hover {
+    transform: scale(1.05);
+}
+
+.carousel-inner .row {
+    justify-content: center;
+}
+
+.card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.carousel-item {
+    height: 350px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #e0e0e0;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #002F52;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: none !important;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+}
+
+.back-to-top i {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #2b8dfc;
+}
+
+#projetos .col-md-4 {
+    max-width: 33%;
+    flex: 1 0 33%;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    #projetos .col-md-4 {
+        max-width: 100%;
+        flex: 1 0 100%;
+    }
+
+    .carousel-item {
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    h2.display-4 {
+        font-size: 24px; /* Ajuste o tamanho da fonte para telas menores */
+        margin: 8px; /* Ajuste as margens conforme necessário */
+    }
+}

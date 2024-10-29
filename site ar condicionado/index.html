@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS - Excelência em Manutenção e instalação de ar condicionado e Câmeras de Segurança.">
+    <title>CS | Soluções em instalação e manutenção de ar, instalação de Câmeras de Segurança</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/Lenovo20241013164836.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Seção Principal (Hero) -->
+    <section class="hero d-flex justify-content-start align-items-center">
+        <div class="container">
+            <div class="hero-header d-flex justify-content-between align-items-center py-3">
+                <h1 class="logo">
+                    <img src="img/logo redeonda.png" alt="Logo ACCA Clima & Monitoramento">                </h1>                
+                <nav class="navbar">
+                    <ul class="navbar-nav d-flex flex-row gap-4">
+                        <li class="nav-item"><a class="nav-link" href="#sobre-nos">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nossos-servicos">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero-text">
+                <h2>Climatizando e Protegendo Seu Espaço com Excelência.</h2>
+                <p class="lead">Na <span class="acca-highlight">CS</span>, oferecemos soluções completas de climatização e segurança. Instalamos ar condicionado e câmeras de segurança com tecnologia moderna, garantindo ambientes confortáveis e protegidos. Priorizamos qualidade e segurança em cada projeto, com uma equipe qualificada para transformar seu espaço.</p>
+                <a href="https://api.whatsapp.com/send?phone=5519999498449&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" class="btn cta-button">Solicite um Orçamento!</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-nos" class="py-5 bg-light text-dark text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4 mb-4">Sobre Nós</h2>
+                    <p class="lead mb-5">A ACCA Clima & Monitoramento é especializada em oferecer soluções completas em instalação de ar condicionado e câmeras de segurança. Com uma equipe altamente qualificada e experiência no mercado, nos dedicamos a entregar serviços de alta qualidade, sempre focados na satisfação do cliente e na excelência dos resultados.</p>
+                    <a href="#contato" class="btn btn-outline-primary btn-lg">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Nossos Serviços -->
+    <section id="nossos-servicos" class="nossos-servicos py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Nossos Serviços</h2>
+            <p class="text-center">Oferecemos serviços especializados em instalação de ar condicionado e câmeras de segurança, garantindo conforto e proteção para sua casa ou empresa.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Instalação de Ar Condicionado</h3>
+                            <p class="card-text">Oferecemos serviços completos de instalação de ar condicionado, proporcionando conforto térmico para residências e empresas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Instalação de Câmeras de Segurança</h3>
+                            <p class="card-text">Realizamos a instalação de câmeras de segurança para monitoramento e proteção de ambientes, garantindo tranquilidade para você e sua família.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Incluindo o script do EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    (function(){
+        // Inicializa o EmailJS com sua Public Key
+        emailjs.init("A3XA7os2qylu8muCJ");
+    })();
+</script>
+
+<section id="contato">
+    <h2>Entre em Contato</h2>
+    <form name="contact" method="POST" data-netlify="true">
+        
+        <p>
+            <label>Nome <input type="text" name="name" /></label>
+        </p>
+        <p>
+            <label>Email <input type="email" name="email" /></label>
+        </p>
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+    </form>
+</section>
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.emailjs.com/sdk/3.3/email.min.js"></script>
+
+
+
+    <!-- Seção de Mapa e Footer -->
+    <section id="mapa-e-footer" class="d-flex justify-content-center align-items-center py-5 bg-dark text-white">
+        <div class="container text-center d-flex flex-column align-items-center">
+            <!-- Footer com redes sociais e copyright -->
+            <footer class="footer bg-dark text-white text-center py-2">
+                <div class="container">
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/cs_monitoramento_clima/" class="text-warning mx-2">Instagram</a>
+                        <a href="#" class="text-warning mx-2">LinkedIn</a>
+                    </div>
+                    <p class="mt-2 mb-0">&copy; 2024 <a href="mailto:aniger.jr@gmail.com?subject=Assunto%20do%20Email&body=Olá,%20escreva%20sua%20mensagem%20aqui!">Enviar email para NexaCore</a>. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5519999498449&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" class="whatsapp-float" target="_blank">
+        <img src="img/imgwhatsapp-icon.png.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <!-- Botão de Voltar ao Topo -->
+    <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
